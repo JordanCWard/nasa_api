@@ -13,8 +13,7 @@ st.write(content)
 
 st.header("Our Team")
 
-
-# NASA api for APOD: Astronomy Picture of the Day
+# NASA API for APOD: Astronomy Picture of the Day
 api_key = "nYoltU1gTNUfsd3WBB5cqQEV6mLdkUm7DW906hEr"
 url = "https://api.nasa.gov/planetary/apod"
 
