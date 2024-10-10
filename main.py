@@ -12,6 +12,7 @@ st.write(content)
 st.header("Our Team")
 
 # NASA API for APOD: Astronomy Picture of the Day
+# Need to clean this portion of the code
 api_key = "nYoltU1gTNUfsd3WBB5cqQEV6mLdkUm7DW906hEr"
 url = "https://api.nasa.gov/planetary/apod"
 
