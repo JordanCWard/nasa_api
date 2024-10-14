@@ -1,21 +1,19 @@
 import streamlit as st
 import requests
 
-st.set_page_config(layout="wide")
-
-content = """
-    kjhcjxzcjkxzvjksjckvnjkcxvlkcxjlkvc xclvjclkxvj cxkl vjlkcxjv 
-    """
-
-st.write(content)
-
-st.header("Our Team")
-
 # NASA API for APOD: Astronomy Picture of the Day
-# Need to clean this portion of the code
-api_key = "nYoltU1gTNUfsd3WBB5cqQEV6mLdkUm7DW906hEr"
-url = "https://api.nasa.gov/planetary/apod"
+api_key = "6HaoNM9mBRHnKyYyh3xEnoNwAPqgDFr0dDw1JfvM"
+url = f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
 
 # Get a JSON dictionary with the data
-website = requests.get(url)
-content = website.json()
+nasa_api = requests.get(url)
+data = nasa_api.json()
+
+st.set_page_config(layout="wide")
+
+col1, col2, col3 = st.columns(3)
+
+with col2:
+    st.title(data["title"])
+    st.image(data["url"])
+    st.write(data["explanation"])
